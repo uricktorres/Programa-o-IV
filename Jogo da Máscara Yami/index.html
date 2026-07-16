@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Máscara Yami</title>
+    >
+</head>
+<body>
+
+    <!-- Cabeçalho com título e menu simples -->
+    <header>
+        <h1>Jogo da Máscara Yami</h1>
+        <nav>
+            <ul class="menunu">
+                ><a href="#jogo">Início</a></l/li>
+                ><a href="#regras">Regras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Área principal do jogo -->
+        <section id="jogo" class="secao-jogo">
+            <div class="painel">
+                <div class="pontuacao">
+                    Pontos: <span id="score">0</span>
+                </div>
+                <div class="tempo">
+                    Tempo: <span id="time">0</span>s
+                </div>
+                <button id="start-btn">Iniciar jogo</button>
+            </div>
+
+            <!-- Área onde a máscara aparece -->
+            <div id="game-area"></div>
+        </section>
+
+        <!-- Seção de regras/descrição -->
+        <section id="regras" class="secao-regras">
+            <h2>Regras do jogo</h2>
+            <p>
+                A máscara Yami aparece em posições aleatórias. Clique nela antes que
+                desapareça para ganhar pontos.
+            </p>
+            <p>
+                O jogo dura alguns segundos. Ao final, sua pontuação total é exibida
+                na área de pontuação.
+            </p>
+            <h3>Mecânica básica</h3>
+            <p>
+                Inimigos aparecem continuamente, somem sozinhos e cada clique correto
+                soma pontos.
+            </p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Jogo desenvolvido para prática de HTML, CSS e JavaScript – Luiz Henrique.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
