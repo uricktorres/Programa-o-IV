@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Front-end dinâmico</title>
+</head>
+<body>
+  <h1>Lista de Posts</h1>
+  <div id="lista-posts"></div>
+  <script>
+    async function carregarPosts() {
+      const resposta = await fetch('http://localhost:3000/posts');
+      const dados = await resposta.json();
+      const lista = document.getElementById('lista-posts');
+      lista.innerHTML = '';
+      dados.forEach((post) => {
+        const item = document.createElement('div');
+        item.innerHTML = `
+          <h3>${post.title}</h3>
+          <p>${post.content}</p>
+          ${post.imageUrl ? `<img src="${post.imageUrl}" alt="${post.title}" width="200">` : ''}
+        `;
+        lista.appendChild(item);
+      });
+    }
+    carregarPosts();
+  </script>
+</body>
+</html>
